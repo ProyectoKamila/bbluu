@@ -1,0 +1,171 @@
+* { outline: none !important; }
+a, a:visited, a:hover, a:active { text-decoration: none; color: inherit; }
+
+/*
+ * ================= Freebie Styles =================
+ */
+
+ul.accordion *
+{
+	box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+}
+
+ul.accordion
+{
+	list-style: none !important;
+	/*width: 300px;*/
+}
+	ul.accordion li
+	{
+		position: relative;
+		/*border-right: 15px solid #2092a3;*/
+	}
+	.border-verde-i{
+	    border-right:15px solid #2092a3;
+	}
+
+	ul.accordion > li
+	{
+		margin-bottom: 2px;
+	}
+
+	ul.accordion > li:last-child
+	{
+		margin-bottom: 0;
+	}
+
+		ul.accordion > li span.name
+		{
+			background: #26aec2 url(../images/more.png) no-repeat 6px;
+			display: inline-block;
+			width: 100%;
+			padding: 15px 0px 15px 40px;
+			color: #ffffff;
+			font-size: 20px;
+		}
+
+			ul.accordion > li span.name:hover
+			{
+				background-color: #26aec2 ;
+				cursor: pointer;
+			}
+
+		ul.accordion > li span.notifications
+		{
+			position: absolute;
+			top: 12px;
+			right: 10px;
+			display: inline-block;
+			float: right;
+			padding: 3px 0;
+			width: 24px;
+			height: 24px;
+			border: 2px solid #ffffff;
+			color: #ffffff;
+			font-size: 12px;
+			text-align: center;
+			-webkit-border-radius: 12px;
+			-moz-border-radius: 12px;
+			border-radius: 12px;
+                        line-height: 1.3;
+		}
+
+		ul.accordion > li.open span.name
+		{
+			/*background: #ffffff url(../images/less.png) no-repeat 6px;
+			color: #6f6f71;*/
+		}
+
+			ul.accordion > li.open span.name:hover
+			{
+				/*background-color: #ebebeb;
+				cursor: pointer;*/
+			}
+
+			ul.accordion > li.open span.notifications
+			{
+				border-color: #cdcdcd;
+				color: #cdcdcd;
+			}
+
+			ul.accordion > li.open > ul
+			{
+				list-style: none !important;
+				padding: 0;
+				margin: 0;
+				background-color: #ffffff;
+				color: #6f6f71;
+			}
+
+			ul.accordion > li.open > ul > li
+			{
+				/*border-top: 1px solid #d5d6d8;*/
+			}
+
+				ul.accordion > li.open > ul > li span.name
+				{
+					background: none;
+					padding: 0px 0px 15px 40px;
+                    font-size: 20px;
+                    border-top:15px solid white;
+				}
+
+			ul.accordion > li.open > ul > li:hover
+			{
+				/*background-color: #ebebeb;*/
+				background-color: #93BA43;
+    			border-right: 15px solid#7D9D38;
+			}
+			ul.accordion > li.open > ul > li:hover>span{
+    			border-top: 15px solid#7D9D38;
+			}
+                        ul#accordion-freebie a {
+position: absolute;
+color: transparent;
+min-width: 60px;
+margin-left: 39px;
+margin-top: 15px;
+}
+.name a {
+color: #6f6f71 !important;
+margin: 0px !important;line-height: 0.6;
+}
+/**/.name2{/*border-bottom: 1px solid #6f6f71;*/color:black !important;}
+li.open name2{background: #ffffff url(../images/less.png) no-repeat 6px !important;
+color: #6f6f71 !important;}
+
+.acc2 .name{padding: 17px 20px 17px 60px !important;}
+.acc3 .name{padding: 17px 20px 17px 80px !important;}
+
+/*.namebg{background: #e77651 !important;}*/
+
+.content_nav_top {
+    background-color: #d7d7d7;
+    overflow: hidden;
+}
+.content_nav ul {
+    padding: 0px;
+    list-style: none;
+}
+.content_nav_top h3 {
+    text-align: center;
+}
+.notifications{
+    display:none !important;
+}
+.border-gris-i{
+	border-right:15px solid #D6D6D6;
+}
+ul.accordion > li.open > ul > li span.name:hover {
+    background-color: #93BA43;
+    border-top: 15px solid#7D9D38;
+}
+.contentpreci {
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    overflow: hidden;
+    border-color: #1C95AA;
+}
