@@ -1,4 +1,5 @@
 <?php
+//debug(pk_get_cat_ID('destacar-en-banner','product_cat'));
 $args = array(
     'type' => 'product',
     'child_of' => 0,
@@ -7,7 +8,7 @@ $args = array(
     'order' => 'ASC',
     'hide_empty' => 0,
     'hierarchical' => 1,
-    'exclude' => array(16,6),
+    'exclude' => array(pk_get_cat_ID('destacado','product_cat'),pk_get_cat_ID('destacar-en-banner','product_cat')),
     'include' => '',
     'number' => '',
     'taxonomy' => 'product_cat',

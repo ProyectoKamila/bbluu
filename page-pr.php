@@ -1,4 +1,4 @@
-<div class="container-fluid slider slider-off">
+<div class="container-fluid slider">
         <div class="container slider">
             <div class="row">
                 <div id="wrapper1">
@@ -22,15 +22,15 @@
                         }else{
                           $cant = 1;
                         }
-                        //debug($cant);
+                        //debug(count($nina));
                       ?>
                       
                       <?php wp_reset_query(); ?>
-                	    <?php for($i = 1; $i <= $cant; $i++){ ?>
+                	    <?php for($i = 1; $i < $cant; $i++){ ?>
                 	    <?php if($cant > 1){ ?>
                 	    <?php if($i%2==1){ $cat = "nina-d"; ?>
                 	    <?php }else{ $cat = "nino-d"; $pag++; }  ?>
-                	    <?php $r = query_posts(array("post_type" => "product", "product_cat" => $cat, "posts_per_page" => 1,'paged' => $pag)); ?>
+                	    <?php $r = query_posts(array("post_type" => "product", "product_cat" => "nina-d", "posts_per_page" => 6,'paged' => $pag)); ?>
                                     <?php while (have_posts()) { ?>
                                         <?php the_post(); ?>
                                         

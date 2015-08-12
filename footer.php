@@ -2,12 +2,13 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="text-align: center;">
                 <a class="dropdown-toggle content-logo" data-toggle="dropdown" href="<?php echo home_url(""); ?>" role="button" aria-expanded="false">
                    <img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="" class="logo"> 
                 </a>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-10 col-md-10">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 frm">
                 <ul class="nav nav-pills menu">
                                     <li role="presentation" class="dropdown">
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo home_url(""); ?>" role="button" aria-expanded="false">
@@ -20,7 +21,7 @@
                                         </a>
                                     </li>
                                     <li role="presentation" class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo home_url("nosotros"); ?>" role="button" aria-expanded="false">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo home_url("about"); ?>" role="button" aria-expanded="false">
                                             Nosotros 
                                         </a>
                                     </li>
@@ -36,19 +37,25 @@
                                     </li>
                 </ul>
                 <div class="clearfix"></div>
-                <p>Copyrigth © 2015  www.bbluu.com/ . Todos los derechos reservados. <br> Desarrollado por <a href="<?php echo "http://proyectokamila.com/"; ?>">Proyecto Kamila</a></p>
+                
             </div>
-            <div class="col-lg-2">
-                <ul class="nav navbar-nav">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <ul class="nav navbar-nav nav-pills foo" style="text-align: right;">
                     <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/g+.png"></img></a></li>
                     <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/tw.png"></img></a></li>
                     <li><a href="#"><img src="<?php bloginfo('template_url'); ?>/images/fc.png"></img></a></li>
               </ul>
             </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="text-align:center;">
+                    <p>Copyrigth © 2015  www.bbluu.com/ . Todos los derechos reservados. <br> Desarrollado por <a href="<?php echo "http://proyectokamila.com/"; ?>">Proyecto Kamila</a></p>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
     
-    <?php //wp_footer(); ?>
+    <?php wp_footer(); ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php bloginfo("template_url"); ?>/scripts/anythingslider/js/jquery.min.js"><\/script>')</script>
 
@@ -109,6 +116,19 @@
                 });
             });
         </script>
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/scripts/numble/demo/stylesheets/demo.css" media="screen" charset="utf-8">
+        <script src="<?php bloginfo('template_url'); ?>/scripts/numble/demo/javascripts/jquery.numble.min.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".style-example").numble({allowNegative:false});
+				$("input[type=number]").numble({
+                  incrementText: "+",
+                  decrementText: "-"
+                });
+                $("#container").addClass("cf");
+                
+			});
+		</script>
 
 </footer>
 </section>

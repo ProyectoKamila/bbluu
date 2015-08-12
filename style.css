@@ -1,5 +1,9 @@
-.main{
-    min-height:85px;
+html, body{min-height:100%;}
+.main {
+    /* min-height: 85px; */
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
 }
 .nav>li>a {
     padding: 33px 15px !important;
@@ -28,26 +32,27 @@
 .r{
     float:right !important;
 }
-.slider{
-    background: url(images/banner.jpg);
-    background-repeat: no-repeat;
-    /*background-size: contain;*/
-    background-position: center;
-    /*max-width: 1170px;*/
-    width:100% !important;
+/*.slider*/ body{
+    background: url(images/banner.jpg) transparent no-repeat !important;
+    background-repeat: no-repeat !important;
+    background-size: 2410px !important;
+    background-position: center 0px !important;
+    /* max-width: 1170px; */
+    width: 100% !important;
+    background-attachment: fixed !important;
 }
 .slider, #expand #slider1, #expand #slider2, #wrapper1{
     height: 450px;
 }
 .nav>li.rico>a:hover, .nav>li.rico>a:focus{
-    /*background:url(images/hover.png) !important;*/
-    background-color: transparent !important;
-    color:white;
+    color: white;
+    background: #07BCF7 !important;
+    border-right: 10px solid #069ECF !important;
 }
 .nav>li.rico:hover{
-        background: url(https://bebelu.jfigueroapcs.c9.io/wp-content/themes/bblu/images/hover.png);
-    background-position: right;
-    transition:1s all;
+        background: url(/images/hover.png);
+        background-position: right;
+        transition:1s all;
 }
 .nav>li>a:focus, .nav>li>a:hover {
     background: white !important;
@@ -57,13 +62,13 @@
     border:none;
     padding:3px 0px;
 }
-body{
+html{
     background: url(images/f.png);
     background-size: contain;
     background-position: center 85px;
     background-repeat-x: no-repeat;
 }
-header{
+.header{
     background:white;
 }
 .no, .na{
@@ -82,6 +87,7 @@ header{
 .produc {
     width: 100%;
     overflow: hidden;
+    background-color:white;
 }
 .producimgcontent img {
     max-width: 100%;
@@ -142,7 +148,7 @@ header{
 }
 
 .fd{
-    background:url(images/fd.jpg);
+    background:url(images/fd.jpg) no-repeat;
     padding-top: 10px;
     padding-bottom: 20px;
     background-position: right top;
@@ -214,14 +220,17 @@ header{
         
 }
 .fna{
-    background:url(images/fna.jpg);
+    background:url(images/fna.jpg) no-repeat;
     padding-top: 10px;
     padding-bottom: 20px;
     background-position: right top;
     padding-left: 20px;
+    max-height: 56px;
+    overflow: hidden;
+    width: 99%;
 }
 .cf{
-	background:white;
+	background:rgba(255, 255, 255, 0.5);
 	/*padding-left:0px !important;*/
 }
 footer {
@@ -232,14 +241,14 @@ footer>.container>.row>.col-lg-2>a>.logo {
     height: 140px;
     padding-top: 10px;
 }
-footer>.container>.row>.col-lg-8>.nav-pills>li>a {
+footer>.container>.row>.col-lg-8>.nav-pills>li>a, .frm ul li a {
     margin: 20px 0;
     border-right: 1px solid #0084A6;
     padding: 15px 15px !important;
     font-weight: 400;
     font-size: 18px;
 }
-footer>.container>.row>.col-lg-8>.nav-pills>li:last-child>a{
+footer>.container>.row>.col-lg-8>.nav-pills>li:last-child>a, .frm ul li:last-child a{
     border:none;
 }
 footer>.container>.row>.col-lg-8>.nav-pills{
@@ -258,4 +267,319 @@ footer>.container>.row>.col-lg-8>p {
 
 footer>.container>.row>.col-lg-2>ul.nav.navbar-nav>li>a {
     padding: 30px 10px!important;
+}
+
+.pag ul.pagination {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+}
+.pag .pagination>li {
+    display: inline-block;
+}
+.pag .pagination>li>a {
+    border:0px !important;
+    border-bottom: 2px solid transparent !important;
+    border-radius:0px !important;
+    border-color:transparent !important;
+    color:black;
+    font-size: 20px;
+}
+.pagination>li>a:hover {
+    background-color: transparent !important;
+    color: black !important;
+    border:none !important;
+}
+.pagination>li:first-child>a:hover , .pagination>li:last-child>a:hover{
+    border-color: white !important;
+}
+.col-lg-2.thumbnails a img {
+    /*max-width: 100%;
+    max-height: 100%;*/
+    max-width: 161px;
+    max-height: 176px;
+    height: auto;
+    padding: 0 0 15px 0 !important;
+}
+
+img.attachment-shop_thumbnail, .img-principal img {
+    width: 100%;
+    height: auto;
+}
+h2.class_title {
+    /* background-color: white; */
+    /* border-bottom: 15px solid; */
+    /* border-right: 15px solid; */
+    /* border-color: #DAD8D8; */
+    margin: 0 0 20px 0;
+    padding: 20px 0;
+    text-align: center;
+}
+.class_content {
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: justify;
+    padding: 15px;
+}
+td.value select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 3px 40px 3px 5px;
+    border: none;
+    background: rgb(253, 253, 253) url("images/arw.png") no-repeat right center;
+    margin: 0 0 .5em;
+}
+td.label label {
+    margin: 0;
+    line-height: 2;
+    color:black;
+    font-size:16px;
+    font-weight:100;
+}
+button.single_add_to_cart_button.button.alt {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    padding: 10px 0px;
+    background-color: #93BC46;
+    font-weight: bold;
+    border-right: 5px solid #7C9B3D;
+}
+.variations_button .col-lg-6 .col-lg-12 {
+    height: 30px;
+}
+.single_variation.col-lg-12 {
+    line-height: 3;
+    font-size: 20px;
+    height: auto !important;
+}
+.container.slider{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 1199px){
+    .container{
+        width:100% !important;
+    }
+}
+@media (min-width: 768px){
+    .no>div, .na>div {
+        margin-top: 60px;
+        margin-bottom: 70px;
+    }
+}
+@media (max-width: 915px){
+    .buscar.r{
+        width:100%;
+    }
+    .buscar.r #s{
+        width:90%;
+    }
+    .buscar.r a{
+        padding: 10px 15px !important;
+    }
+    .buscar.r #s, .buscar.r #searchsubmit{
+        height:40px;
+    }
+    .buscar.r form#searchform{
+        text-align:center;
+    }
+    .container-fluid.slider{
+        display:none;
+    }
+}
+@media (max-width: 992px){
+    .produc{
+        margin-top:10px;
+    }
+    .irri{
+        margin:10px 0px;
+    }
+    .col-lg-4 .quantity .numble-wrapper .numble-control, .col-lg-12 .quantity .numble-wrapper .numble-control{
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50% !important;
+    }
+    td.value select {
+        width: 70%;
+        text-align: center;
+        display: block;
+    }
+    span.price{
+        text-align:center;
+    display: block;
+    }
+}
+.fdn{
+    background:url(images/fdn.jpg) no-repeat;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-position: right bottom;
+    padding-left: 20px;
+}
+@media (max-width: 991px){
+    .ddrr{
+    max-width: 871px;
+    float: right;
+    width: 100%;
+    }
+    .content_nav{
+        position:relative !important;
+    }
+    .slider-off{
+        display:none;
+    }
+    .foo {
+    text-align: center !important;
+    width: 100%;
+}
+}
+a.remove.remove_from_wishlist, .woocommerce a.remove {
+    border: 3px solid !important;
+    width: 1.5em !important;
+    height: 1.5em !important;
+    margin: 0 auto;
+}
+
+.woocommerce a.remove:hover {
+    color: #3E3E3E!important;
+    background: transparent !important;
+}
+tr.cart_item td.product-thumbnail a img {
+    max-width: 100px;
+    max-height: 100%;
+}
+.woocommerce{
+    background:rgba(255,255,255,0.5);
+    padding: 0 15px;
+}
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+    min-height: 30px;
+}
+.col2-set.addresses .address {
+    width: 50%;
+    padding: 0 20px;
+}
+
+ ul.nav.navbar-nav.nav-pills.foo li {
+    float: none;
+    display: inline-block;
+}
+.frm ul {
+    text-align: center;
+}
+.frm ul li {
+    float: none;
+    display: inline-block;
+    text-align: center;
+}
+li.r.rico a {
+    padding: 33px 21px !important;
+}
+.contact-img img {
+    border-left: 10px solid rgba(000,000,000,0.3);
+    border-right: 10px solid rgba(000,000,000,0.3);
+    margin: 30px auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.contact-from form div input {
+    width: 90%;
+}
+.contact-from form div label {
+    width: 22%;
+}
+.contact-from form div * {
+    float: left;
+}
+.contact-from form div input {
+    width: 76%;
+    height: 30px;
+    border: none;
+}
+.contact-from {
+    background-color: rgba(251, 251, 251, 0.5);
+    padding: 40px 0px;
+}
+.contact-from form div input, .contact-from form div textarea.text {
+    width: 76%;
+    min-height: 30px;
+    border: none;
+    margin: 7px 0;
+    background-color: rgba(71, 170, 228, 0.5);
+}
+.contact-from form div textarea.text {
+    height: 100px;
+}
+.contact-from form div input.form-enviar {
+    max-width: 130px;
+    height: 50px;
+    float: right;
+    background-color: #93BB40;
+    border-right: 10px solid #7B9E38;
+    font-weight:bold;
+}
+.contact-from {
+    margin-top: 40px;
+}
+.frm ul.nav.nav-pills.menu li a, ul.nav.navbar-nav.nav-pills.foo li a {
+    background-color: transparent !important;
+}
+
+.contact-map{
+    overflow:hidden;
+}
+.contact-map iframe{
+    width:100%;
+}
+ul.nav.nav-pills.contact-redes li a {
+    padding: 10px 15px !important;
+}
+ul.nav.nav-pills.contact-redes li a:hover {
+    background-color: transparent !important;
+}
+
+.sin-padding{
+    padding:0 !important;
+}
+.contact-icon{
+    max-width:34px;
+    max-height:38px;
+}
+.contact-icon1{
+    max-width:37px;
+    max-height:38px;
+}
+a.navbar-brand.content-logo {
+    padding: 2px 0px 0px 0px !important;
+    height: auto !important;
+}
+nav.navbar {
+    margin: 0 !important;
+    border: 0 !important;
+    min-height: 80px;
+}
+button.navbar-toggle {
+    border: 1px solid rgb(68, 165, 255) !important;
+}
+.navbar-toggle .icon-bar {
+    background-color: rgb(68, 165, 255) !important;
+}
+@media (max-width: 768px){
+    .nav-pills>li {
+        float: none !important;
+    }
+}
+.nav>li.rico>a {
+    border-right: 10px solid transparent !important;
+}
+.pagination>li>a {
+    background-color: transparent !important;
+}
+.pagination>li:first-child>a:hover, .pagination>li:last-child>a:hover {
+    border-color: #93bb43;
+}
+a.end:hover {
+    border-color: transparent !important;
 }

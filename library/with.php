@@ -1,5 +1,5 @@
 <?php 
-
+if(YITH_WCWL_UI){
 class MY_YITH extends YITH_WCWL_UI{
 
     public static function add_to_wishlist_button( $url, $product_type, $exists ) {
@@ -15,12 +15,12 @@ class MY_YITH extends YITH_WCWL_UI{
 
         $html .= $exists ? ' hide" style="display:none;"' : ' show"';
 
-        $html .= '><a href="' . esc_url( $yith_wcwl->get_addtowishlist_url() ) . '" data-product-id="' . $product->id . '" data-product-type="' . $product_type . '" ' . $classes . ' ><span class="glyphicon glyphicon-heart" aria-hidden="true" style="padding: 12px 0px !important;color: black;"></span></a>';
+        $html .= '><a href="' . esc_url( $yith_wcwl->get_addtowishlist_url() ) . '" data-product-id="' . $product->id . '" data-product-type="' . $product_type . '" ' . $classes . ' ><span class="glyphicon glyphicon-heart" aria-hidden="true" style="/*padding: 12px 0px !important;*/color: black;"></span></a>';
 //        $html .= '<img src="' . esc_url( admin_url( 'images/wpspin_light.gif' ) ) . '" class="ajax-loading" id="add-items-ajax-loading" alt="" width="16" height="16" style="visibility:hidden" />';
         $html .= '</div>';
 
         $html .= '<div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"><a href="' . esc_url( $url ) . '"></a></div>';
-        $html .= '<div class="yith-wcwl-wishlistexistsbrowse ' . ( $exists ? 'show' : 'hide' ) . '" style="display:' . ( $exists ? 'block' : 'none' ) . '"><a href="' . esc_url( $url ) . '"></a></div>';
+        $html .= '<div class="yith-wcwl-wishlistexistsbrowse ' . ( $exists ? 'show' : 'hide' ) . '" style="display:' . ( $exists ? 'block' : 'none' ) . '"><a href="' . esc_url( $url ) . '"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true" style="/*padding: 12px 0px !important;*/color: black;"></span></a></div>';
         $html .= '<div style="clear:both"></div><div class="yith-wcwl-wishlistaddresponse"></div>';
 
         $html .= '</div>';
@@ -66,4 +66,5 @@ class MY_YITH extends YITH_WCWL_UI{
 
         return $cartlink;
     }
+}
 }
