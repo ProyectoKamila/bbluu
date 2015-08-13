@@ -57,7 +57,6 @@ function pagination($pages = '', $range = 4) {
     
     
     
-    
 
     if (1 != $pages) {
         echo "<ul class=\"pagination\">";

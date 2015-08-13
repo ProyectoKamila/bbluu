@@ -46,7 +46,7 @@
                                         <div class="producimgcontent" style="background:url(<?php the_first_image(); ?>);">
                                             <img src="<?php bloginfo('template_url'); ?>/images/pr.png"/>
                                             <div class="producimgtext">
-                                                <span class="tite"> <?php the_title(); echo get_the_ID(); ?></span>
+                                                <span class="tite"> <?php the_title(); ?></span>
                                                 <div class="contenthetext">
                                                 <?php echo substr(get_the_content(), 0, 200); ?>
                                             </div>
@@ -66,13 +66,13 @@
                                                     <?= MY_YITH::add_to_wishlist_button( $yith_wcwl->get_wishlist_url(), $product->product_type, $yith_wcwl->is_product_in_wishlist( $product->id ) );?>
                                                 </div>
                                         </div>
-                                    </div>
+                                    </div>   
+                                </div>
+                            </div>
                                     
                                     <?php } elseif($i%2==0){ ?>
                                     
-                                    
-                                </div>
-                            </div>
+                                 
                             
                             <div class="col-lg-6 col-md-6 col-sm-6 no">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -84,7 +84,7 @@
                                         <div class="producimgcontent" style="background:url(<?php the_first_image(); ?>);">
                                             <img src="<?php bloginfo('template_url'); ?>/images/pr.png"/>
                                             <div class="producimgtext">
-                                                <span class="tite"> <?php the_title(); echo get_the_ID(); ?></span>
+                                                <span class="tite"> <?php the_title(); ?></span>
                                                 <div class="contenthetext">
                                                 <?php echo substr(get_the_content(), 0, 200); ?>
                                             </div>
@@ -112,7 +112,7 @@
                 		<?php } ?>
                 		<?php //} ?>
                 		<?php } ?>
-                		<?php }else{ echo '<li></li>';} ?>
+                		<?php }else{ /*echo '<li></li>';*/} ?>
                 		<?php } ?>
                 	</ul>
                 </div>
